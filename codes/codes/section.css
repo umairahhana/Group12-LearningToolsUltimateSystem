@@ -1,0 +1,18 @@
+section{
+	text-align: center;
+}
+
+footer{
+	position: relative;
+	height: 5rem;
+}
+
+#copy{
+	position: fixed;
+	bottom: 0;
+	height: auto;
+	width: 100%;
+	background-color: #ddd;
+	padding: 10px 0 10px 0;
+	text-align: center;
+}

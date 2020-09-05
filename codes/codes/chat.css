@@ -1,0 +1,40 @@
+*{
+	font-family: 'Open Sans';
+	box-sizing: border-box;	
+}
+
+.box{
+	width: 50%;
+	height: 70%;
+	border: 2px solid #ddd;
+}
+
+.box > .header{
+	width: 100%;
+	background: white;
+	padding-left: 6px;
+	border-bottom: 3px solid #ddd;
+}
+
+.box > #messages{
+	height: 80%;
+	padding: 3px;
+	border-bottom: 3px solid #dddd;
+	overflow-y: scroll;
+	word-break: break-word;
+}
+
+.box > .bottom form input[type='text']{
+	width: 84%;
+	padding: 3px;
+	border-style: inset;
+	border-radius: 9px;
+	position: relative;
+	top: 6px;
+	left: 5px;
+}
+
+#send{
+	width: 100%;
+	margin: 10 10 10 10;
+}
