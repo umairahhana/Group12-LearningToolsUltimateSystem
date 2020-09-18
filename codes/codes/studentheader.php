@@ -10,7 +10,6 @@
 				<a class="dropdown-item" href="enrollclass.php">Enroll Class</a>
 				<a class="dropdown-item" href="dropclass.php">Drop Class</a>
 				<a class="dropdown-item" href="todolist.php">To-do List</a>
-				<a class="dropdown-item" href="resume.php">Resume Generator</a>
 				<a class="dropdown-item" href="timetablestudent.php">Time Table</a>
 			</div>
 		</li>
