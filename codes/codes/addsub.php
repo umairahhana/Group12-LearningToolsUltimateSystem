@@ -60,9 +60,8 @@
 						sub_tut_end.innerHTML = time;
 						sub_tut_end.value = time;
 					};
-
 				</script>
-				
+
 					Tutorial Class Day: <br>
 					<select name = "sub_tut_day" required>
 						<option value = "Monday">Monday</option>
