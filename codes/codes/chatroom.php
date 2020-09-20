@@ -49,7 +49,7 @@
 					   submitChat();
 					 }
 				});
-				setInterval( function(){ $('#messages').load('logs.php'); }, 2000); */
+				setInterval( function(){ $('#messages').load('logs.php'); }, 2000); 
 			});
 		</script>
 	</head>
@@ -57,9 +57,9 @@
 	<body>
 		<?php include 'studentheader.php' ?>
 		<section class = "container-fluid" style="margin-top:80px">
-			<div class='box'>
-				<div class='header'>
-					<h1>Chat Room</h1>
+			<div class='box' id="box">
+				<div class="header" style="background-color: grey">
+					<h1 align="center">Chat Room</h1>
 				</div>
 				<div id="messages"> 
 					
@@ -68,11 +68,41 @@
 					<form name="form1" id = "form">
 						<input type='hidden' name = "uname" value = "<?php echo $name1;?>"></input>
 						<input type='text' id='msg_area' name="msg" autocomplete='off' placeholder='Type your message here...'/>
-						<a href="#" onclick="submitChat()" id = "send">Send</a><br /><br />
+						<button onclick="submitChat()" class="button">Send</button>
 					</form>
 				</div>
 			</div>
 		</section>
 		<?php include 'footer.php' ?>
 	</body>
+	<style>
+
+.box {
+  position:absolute;
+  top:20%;
+  left:30%;
+  margin-top:-50px; /* this is half the height of your div*/  
+  margin-left:-100px; /*this is half of width of your div*/
+}
+
+div.header {
+	background-color: grey;
+}
+
+div.bottom {
+	background-color: grey;
+}
+
+.button {
+  background-color: #4CAF50;
+  color: black;
+  border-radius: 12px;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  margin: 15px 5px;
+}
+
+</style>
+	
 </html>
