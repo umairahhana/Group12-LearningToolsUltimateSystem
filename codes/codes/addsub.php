@@ -9,7 +9,7 @@
 		<script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	</head>
-
+	
 	<body>
 		<?php include 'adminheader.php' ?>
 		<section class = "container-fluid" style="margin-top:80px">
@@ -21,7 +21,7 @@
 					Subject Name: <br>
 					<input type = "text" name = "sub_name" required><br>
 					Lecture Time Start from: <br>
-					<input type = "time" id = "sub_lec_start" name = "sub_lec_start" required><br>
+					<input type = "time" id = "sub_lec_start" name = "sub_lec_start" required><br>					
 					Lecture Time End at: <span id = "sub_lec_end" name="sub_lec_end"></span><br>
 					<script>
 						sub_lec_start.oninput = function(){
@@ -32,7 +32,7 @@
 							sub_lec_end.innerHTML = time;
 							sub_lec_end.value = time;
 						};
-
+			
 					</script>
 					Lecture Class Day: <br>
 					<select name = "sub_lec_day" required>
@@ -46,11 +46,10 @@
 					</select><br>
 					Lecture Room: <br>
 					<input type = "text" name = "sub_lec_room" required><br><hr>
-					Tutorial Time Start from: <br>
-<<<<<<< Updated upstream
+          
+				Tutorial Time Start from: <br>
 				<input type = "time" id = "sub_tut_start" name = "sub_tut_start" required><br>
 				Tutorial Time End at: <span id = "sub_tut_end" name="sub_tut_end"></span><br>
-
 				<script>
 					sub_tut_start.oninput = function (){
 						var start = sub_tut_start.value;
@@ -61,12 +60,6 @@
 						sub_tut_end.value = time;
 					};
 				</script>
-
-=======
-					<input type = "time" name = "sub_tut_start" required><br>
-					Tutorial Time End at: <br>
-					<input type = "time" name = "sub_tut_end" required><br>
->>>>>>> def25346702a167fbf14b1d4997e9676209820ca
 					Tutorial Class Day: <br>
 					<select name = "sub_tut_day" required>
 						<option value = "Monday">Monday</option>

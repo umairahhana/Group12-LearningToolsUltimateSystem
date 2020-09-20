@@ -19,11 +19,12 @@
 		<script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		<script>
-			function submitChat() {
+			function sendMessage(e) {
 				if(form1.msg.value == '') {
 					alert("ALL FIELDS ARE MANDATORY!!!");
 					return;
 				}
+				$("#send_massage").addClass("disabled");
 				var uname = form1.uname.value;
 				var msg = form1.msg.value;
 				var xmlhttp = new XMLHttpRequest();
@@ -39,17 +40,22 @@
 				form1.msg.value = '';
 			}
 
-			$(document).ready(function(e){
+			$(document).ready(function (e) {
 				$.ajaxSetup({
-					cache: false
+					cache: false	
 				});
-				$( "#msg_area" ).keyup(function(e) {
-					  var code = e.keyCode || e.which;
-					 if(code == 13) { //Enter keycode
-					   submitChat();
-					 }
+				$(document).focus();
+				$("#send_massage").click(sendMessage);
+				$("#send_massage").keyup(sendMessage);
+
+				$("input").keypress(function(event) {
+					if (event.which == 13) {
+						event.preventDefault();
+						sendMessage();
+					}
 				});
-				setInterval( function(){ $('#messages').load('logs.php'); }, 2000); 
+
+				setInterval( function(){ $('#messages').load('logs.php'); }, 100);
 			});
 		</script>
 	</head>
@@ -61,14 +67,13 @@
 				<div class="header" style="background-color: grey">
 					<h1 align="center">Chat Room</h1>
 				</div>
-				<div id="messages"> 
-					
+				<div id="messages"> 	
 				</div>
 				<div class="bottom">
 					<form name="form1" id = "form">
 						<input type='hidden' name = "uname" value = "<?php echo $name1;?>"></input>
-						<input type='text' id='msg_area' name="msg" autocomplete='off' placeholder='Type your message here...'/>
-						<button onclick="submitChat()" class="button">Send</button>
+						<input type='text' id='msg_area' name="msg" autocomplete='off' autofocus placeholder='Type your message here...'/>
+						<button type="submit" id="send_massage" style="margin-right:6px;">SEND</button>
 					</form>
 				</div>
 			</div>
