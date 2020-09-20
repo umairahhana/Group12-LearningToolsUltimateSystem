@@ -46,10 +46,20 @@
 					</select><br>
 					Lecture Room: <br>
 					<input type = "text" name = "sub_lec_room" required><br><hr>
-					Tutorial Time Start from: <br>
-					<input type = "time" name = "sub_tut_start" required><br>
-					Tutorial Time End at: <br>
-					<input type = "time" name = "sub_tut_end" required><br>
+          
+				Tutorial Time Start from: <br>
+				<input type = "time" id = "sub_tut_start" name = "sub_tut_start" required><br>
+				Tutorial Time End at: <span id = "sub_tut_end" name="sub_tut_end"></span><br>
+				<script>
+					sub_tut_start.oninput = function (){
+						var start = sub_tut_start.value;
+						var splitStart = start.split(":");
+						var value = Number(splitStart[0]) + 2;
+						var time = new Date(0,0,0,value,splitStart[1]).toLocaleTimeString();
+						sub_tut_end.innerHTML = time;
+						sub_tut_end.value = time;
+					};
+				</script>
 					Tutorial Class Day: <br>
 					<select name = "sub_tut_day" required>
 						<option value = "Monday">Monday</option>
