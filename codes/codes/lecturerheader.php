@@ -11,7 +11,15 @@
 				<a class="dropdown-item" href="deleteclass.php">Delete Class</a>
 				<a class="dropdown-item" href="timetablelecturer.php">Time Table</a>
 			</div>
-		</li>	
+		</li>
+		<li class = "nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+			role="button" data-toggle="dropdown" aria-haspopup="true" 
+			aria-expanded="false">Communication</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="lec_chatroom.php">Chatroom</a>
+			</div>
+		</li>			
 		</ul>
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
