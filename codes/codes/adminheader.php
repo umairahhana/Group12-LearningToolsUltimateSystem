@@ -24,8 +24,7 @@
 			role="button" data-toggle="dropdown" aria-haspopup="true" 
 			aria-expanded="false">Communication</a>
 			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" href="#">Chatroom</a>
-				<a class="dropdown-item" href="#">Mail Sending</a>
+				<a class="dropdown-item" href="admin_chatroom.php">Chatroom</a>
 			</div>
 		</li>	
 		</ul>
